@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 30 10% 15%;
+
+    --card: 40 30% 95%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 40 33% 97%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 24 70% 45%;
+    --primary-foreground: 40 33% 97%;
+
+    --secondary: 30 20% 90%;
+    --secondary-foreground: 30 10% 20%;
+
+    --muted: 30 15% 92%;
+    --muted-foreground: 30 8% 50%;
+
+    --accent: 24 60% 50%;
+    --accent-foreground: 40 33% 97%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 40 33% 97%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 24 70% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 30 20% 94%;
+    --sidebar-foreground: 30 10% 20%;
+    --sidebar-primary: 24 70% 45%;
+    --sidebar-primary-foreground: 40 33% 97%;
+    --sidebar-accent: 30 15% 90%;
+    --sidebar-accent-foreground: 30 10% 20%;
+    --sidebar-border: 30 15% 85%;
+    --sidebar-ring: 24 70% 45%;
+
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    --gradient-warm: linear-gradient(135deg, hsl(24 70% 45%), hsl(35 80% 55%));
+    --gradient-subtle: linear-gradient(180deg, hsl(40 33% 97%), hsl(30 20% 94%));
+    --shadow-card: 0 2px 12px -2px hsl(30 10% 15% / 0.06);
+    --shadow-elevated: 0 8px 30px -8px hsl(30 10% 15% / 0.12);
+
+    /* Category colors */
+    --cat-fiction: 220 60% 55%;
+    --cat-fantasy: 270 50% 55%;
+    --cat-scifi: 190 70% 45%;
+    --cat-horror: 0 50% 40%;
+    --cat-romance: 340 60% 55%;
+    --cat-poetry: 45 60% 50%;
+    --cat-journal: 150 40% 45%;
+    --cat-mystery: 260 40% 40%;
+    --cat-motivation: 30 70% 50%;
+  }
+
+  .dark {
+    --background: 30 10% 8%;
+    --foreground: 40 20% 90%;
+
+    --card: 30 10% 12%;
+    --card-foreground: 40 20% 90%;
+
+    --popover: 30 10% 10%;
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 24 70% 55%;
+    --primary-foreground: 30 10% 8%;
+
+    --secondary: 30 10% 16%;
+    --secondary-foreground: 40 20% 85%;
+
+    --muted: 30 8% 18%;
+    --muted-foreground: 30 10% 55%;
+
+    --accent: 24 60% 55%;
+    --accent-foreground: 30 10% 8%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 40 33% 97%;
+
+    --border: 30 8% 20%;
+    --input: 30 8% 20%;
+    --ring: 24 70% 55%;
+
+    --sidebar-background: 30 10% 10%;
+    --sidebar-foreground: 40 20% 85%;
+    --sidebar-primary: 24 70% 55%;
+    --sidebar-primary-foreground: 30 10% 8%;
+    --sidebar-accent: 30 8% 16%;
+    --sidebar-accent-foreground: 40 20% 85%;
+    --sidebar-border: 30 8% 18%;
+    --sidebar-ring: 24 70% 55%;
+
+    --shadow-card: 0 2px 12px -2px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 8px 30px -8px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+}
